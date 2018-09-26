@@ -35,13 +35,19 @@ defmodule Hangman.Game do
   # ----------------------------------------------------
 
   def validate_guess(guess) do
-    case String.codepoints(guess) do
-      list when length(list) != 1 -> :guess_bad_length
-      [char] when not (char >= "a" and char <= "z") -> :guess_bad_range
-      # [char | _] when char < 'a' or char > 'z' -> char
-      _ -> guess
-    end
+    String.codepoints(guess)
+    |> validate_guess_helper()
   end
+
+  defp validate_guess_helper(guess_list) when length(guess_list) != 1 do
+    :guess_bad_length
+  end
+
+  defp validate_guess_helper([char | _]) when not (char >= "a" and char <= "z") do
+    :guess_bad_range
+  end
+
+  defp validate_guess_helper(guess_list), do: List.to_string(guess_list)
 
   defp accept_move(game, _guess, _already_guessed = true) do
     Map.put(game, :game_state, :already_used)
