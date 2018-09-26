@@ -102,4 +102,16 @@ defmodule GameTest do
 
     assert game.game_state == :lost
   end
+
+  test "guessing with a valid guess" do
+    assert Game.validate_guess("a") == "a"
+  end
+
+  test "guessing with a too many characters" do
+    assert Game.validate_guess("aa") == :guess_bad_length
+  end
+
+  test "guessing with a guess thats not between a and z lower case" do
+    assert Game.validate_guess("A") == :guess_bad_range
+  end
 end
