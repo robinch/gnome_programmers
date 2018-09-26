@@ -1,0 +1,48 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Game	lib/hangman/game.ex	/^defmodule Hangman.Game do$/;"	m
+GameTest	test/hangman/game_test.exs	/^defmodule GameTest do$/;"	m
+Hangman	lib/hangman.ex	/^defmodule Hangman do$/;"	m
+HangmanTest	test/hangman_test.exs	/^defmodule HangmanTest do$/;"	m
+MixProject	mix.exs	/^defmodule Hangman.MixProject do$/;"	m
+a good guess is recognized	test/hangman/game_test.exs	/^  test "a good guess is recognized" do$/;"	t
+a guessed word is a won game	test/hangman/game_test.exs	/^  test "a guessed word is a won game" do$/;"	t
+accept_move	lib/hangman/game.ex	/^  defp accept_move(game, _guess, _already_guessed = true) do$/;"	g
+accept_move	lib/hangman/game.ex	/^  defp accept_move(game, guess, _not_already_guessed) do$/;"	g
+all letters are lowercase	test/hangman/game_test.exs	/^  test "all letters are lowercase" do$/;"	t
+application	mix.exs	/^  def application do$/;"	f
+bad guess is recognized	test/hangman/game_test.exs	/^  test "bad guess is recognized" do$/;"	t
+deps	mix.exs	/^  defp deps do$/;"	g
+first occurence of letters is not already used	test/hangman/game_test.exs	/^  test "first occurence of letters is not already used" do$/;"	t
+guessing with a guess thats not between a and z lower case	test/hangman/game_test.exs	/^  test "guessing with a guess thats not between a and z lower case" do$/;"	t
+guessing with a too many characters	test/hangman/game_test.exs	/^  test "guessing with a too many characters" do$/;"	t
+guessing with a valid guess	test/hangman/game_test.exs	/^  test "guessing with a valid guess" do$/;"	t
+lost game is recognized	test/hangman/game_test.exs	/^  test "lost game is recognized" do$/;"	t
+make_move	lib/hangman.ex	/^  def make_move(game, guess) do$/;"	f
+make_move	lib/hangman/game.ex	/^  def make_move(game = %{game_state: state}, _guess) when state in [:won, :lost] do$/;"	f
+make_move	lib/hangman/game.ex	/^  def make_move(game, guess) do$/;"	f
+maybe_won	lib/hangman/game.ex	/^  defp maybe_won(_), do: :good_guess$/;"	g
+maybe_won	lib/hangman/game.ex	/^  defp maybe_won(true), do: :won$/;"	g
+new_game	lib/hangman.ex	/^  defdelegate new_game(), to: Game$/;"	d
+new_game	lib/hangman/game.ex	/^  def new_game() do$/;"	f
+new_game	lib/hangman/game.ex	/^  def new_game(word) do$/;"	f
+new_game returns structure	test/hangman/game_test.exs	/^  test "new_game returns structure" do$/;"	t
+project	mix.exs	/^  def project do$/;"	f
+reveal_guessed	lib/hangman/game.ex	/^  defp reveal_guessed(letters, used) do$/;"	g
+reveal_letter	lib/hangman/game.ex	/^  defp reveal_letter(_letter, _not_in_word), do: "_"$/;"	g
+reveal_letter	lib/hangman/game.ex	/^  defp reveal_letter(letter, _in_word = true), do: letter$/;"	g
+score_guess	lib/hangman/game.ex	/^  defp score_guess(game = %{turns_left: 1}, _not_good_guess) do$/;"	g
+score_guess	lib/hangman/game.ex	/^  defp score_guess(game = %{turns_left: turns_left}, _not_good_guess) do$/;"	g
+score_guess	lib/hangman/game.ex	/^  defp score_guess(game, _good_guess = true) do$/;"	g
+second occurence of letters is already used	test/hangman/game_test.exs	/^  test "second occurence of letters is already used" do$/;"	t
+state isn	test/hangman/game_test.exs	/^  test "state isn't changed for :won or :lost game" do$/;"	t
+tally	lib/hangman.ex	/^  defdelegate tally(game), to: Game$/;"	d
+tally	lib/hangman/game.ex	/^  def tally(game) do$/;"	f
+validate_guess	lib/hangman/game.ex	/^  def validate_guess(guess) do$/;"	f
+validate_guess_helper	lib/hangman/game.ex	/^  defp validate_guess_helper([char | _]) when not (char >= "a" and char <= "z") do$/;"	g
+validate_guess_helper	lib/hangman/game.ex	/^  defp validate_guess_helper(guess_list) when length(guess_list) != 1 do$/;"	g
+validate_guess_helper	lib/hangman/game.ex	/^  defp validate_guess_helper(guess_list), do: List.to_string(guess_list)$/;"	g
